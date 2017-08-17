@@ -1,0 +1,36 @@
+<view class="clock">
+  <view class="flip">
+    <view class="flip-num">{{ hourTenth }}</view>
+    <!-- <view class="flip-click-before">
+      <view class="up">
+        <view class="shadow"></view>
+        <view class="inn"></view>
+      </view>
+      <view class="down">
+        <view class="shadow"></view>
+        <view class="inn"></view>
+      </view>
+    </view> -->
+  </view>
+  <view class="flip">
+    <view class="flip-num">{{ hourUnit }}</view>
+  </view>
+  <view class="slip"></view>
+  <view class="icon">:</view>
+  <view class="slip"></view>
+  <view class="flip">
+    <view class="flip-num">{{ minuteTenth }}</view>
+  </view>
+  <view class="flip">
+    <view class="flip-num">{{ minuteUnit }}</view>
+  </view>
+  <view class="slip"></view>
+  <view class="icon">:</view>
+  <view class="slip"></view>
+  <view class="flip">
+    <view class="flip-num">{{ secondTenth }}</view>
+  </view>
+  <view class="flip">
+    <view class="flip-num">{{ secondUnit }}</view>
+  </view>
+</view>

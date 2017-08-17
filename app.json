@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/clock/clock",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "简时钟",
+    "navigationBarTextStyle": "white"
+  }
+}
