@@ -1,4 +1,5 @@
-<view class="flip-clock-wrapper {{ showType === 1 ? 'clock-30' : 'clock' }}" style="margin:2em;">
+<button class="controlbtn" bindtap="changeTitle"></button> 
+<view class="flip-clock-wrapper {{ showType === 1 ? 'clock-30' : 'clock' }}" >
   <!-- <span class="flip-clock-divider ">
     <span class="flip-clock-label"></span>
     <span class="flip-clock-dot top"></span>

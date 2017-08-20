@@ -79,21 +79,26 @@ Page({
     })
   },
   changeTitle: function() {
+    console.log(111);
     let title = '';
     let showType = this.data.showType === 0 ? 1 : 0;
     switch (this.data.title) {
       case '简时钟':
-        title = '';
+        title = ' ';
         break;
       case 'Concise Time':
         title = '简时钟';
         break;
-      case '':
+      case ' ':
         title = 'Concise Time';
         break;
       default:
-        title = '';
+        title = ' ';
     }
+    console.log(title)
+    wx.setNavigationBarTitle({
+      title
+    });
     this.setData({
       title,
       showType
