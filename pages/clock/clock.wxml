@@ -1,36 +1,199 @@
-<view class="clock">
-  <view class="flip">
-    <view class="flip-num">{{ hourTenth }}</view>
-    <!-- <view class="flip-click-before">
-      <view class="up">
-        <view class="shadow"></view>
-        <view class="inn"></view>
-      </view>
-      <view class="down">
-        <view class="shadow"></view>
-        <view class="inn"></view>
-      </view>
-    </view> -->
+<view class="flip-clock-wrapper {{ showType === 1 ? 'clock-30' : 'clock' }}" style="margin:2em;">
+  <!-- <span class="flip-clock-divider ">
+    <span class="flip-clock-label"></span>
+    <span class="flip-clock-dot top"></span>
+    <span class="flip-clock-dot bottom"></span>
+  </span> -->
+  <view class="flip-ul">
+    <ul class="flip {{ hourTenth.play === 1 ? 'play' : ''}}">
+      <li class="flip-clock-before">
+        <a href="#">
+          <div class="up">
+            <div class="shadow"></div>
+            <div class="inn">{{ hourTenth.beforeUp }}</div>
+          </div>
+          <div class="down">
+            <div class="shadow"></div>
+            <div class="inn">{{ hourTenth.beforeDown }}</div>
+          </div>
+        </a>
+      </li>
+      <li class="flip-clock-active">
+        <a href="#">
+          <div class="up">
+            <div class="shadow"></div>
+            <div class="inn">{{ hourTenth.up }}</div>
+          </div>
+          <div class="down">
+            <div class="shadow"></div>
+            <div class="inn">{{ hourTenth.down }}</div>
+          </div>
+        </a>
+      </li>
+    </ul>
   </view>
-  <view class="flip">
-    <view class="flip-num">{{ hourUnit }}</view>
+  <view class="gap"></view> 
+  <view class="flip-ul">
+    <ul class="flip {{ hourUnit.play === 1 ? 'play' : ''}}">
+      <li class="flip-clock-before">
+        <a href="#">
+          <div class="up">
+            <div class="shadow"></div>
+            <div class="inn">{{ hourUnit.beforeUp }}</div>
+          </div>
+          <div class="down">
+            <div class="shadow"></div>
+            <div class="inn">{{ hourUnit.beforeDown }}</div>
+          </div>
+        </a>
+      </li>
+      <li class="flip-clock-active">
+        <a href="#">
+          <div class="up">
+            <div class="shadow"></div>
+            <div class="inn">{{ hourUnit.up }}</div>
+          </div>
+          <div class="down">
+            <div class="shadow"></div>
+            <div class="inn">{{ hourUnit.down }}</div>
+          </div>
+        </a>
+      </li>
+    </ul>
   </view>
-  <view class="slip"></view>
-  <view class="icon">:</view>
-  <view class="slip"></view>
-  <view class="flip">
-    <view class="flip-num">{{ minuteTenth }}</view>
+  <!-- <view class="gap"></view>  -->
+  <view class="gap-divider">
+    <span class="flip-clock-divider ">
+      <span class="flip-clock-label"></span>
+      <span class="flip-clock-dot top"></span>
+      <span class="flip-clock-dot bottom"></span>
+    </span>
   </view>
-  <view class="flip">
-    <view class="flip-num">{{ minuteUnit }}</view>
+
+  <view class="gap"></view> 
+  <view class="flip-ul">
+    <ul class="flip {{ minuteTenth.play === 1 ? 'play' : ''}}">
+      <li class="flip-clock-before">
+        <a href="#">
+          <div class="up">
+            <div class="shadow"></div>
+            <div class="inn">{{ minuteTenth.beforeUp }}</div>
+          </div>
+          <div class="down">
+            <div class="shadow"></div>
+            <div class="inn">{{ minuteTenth.beforeDown }}</div>
+          </div>
+        </a>
+      </li>
+      <li class="flip-clock-active">
+        <a href="#">
+          <div class="up">
+            <div class="shadow"></div>
+            <div class="inn">{{ minuteTenth.up }}</div>
+          </div>
+          <div class="down">
+            <div class="shadow"></div>
+            <div class="inn">{{ minuteTenth.down }}</div>
+          </div>
+        </a>
+      </li>
+    </ul>
   </view>
-  <view class="slip"></view>
-  <view class="icon">:</view>
-  <view class="slip"></view>
-  <view class="flip">
-    <view class="flip-num">{{ secondTenth }}</view>
+  <view class="gap"></view> 
+  <view class="flip-ul">
+    <ul class="flip {{ minuteUnit.play === 1 ? 'play' : ''}}">
+      <li class="flip-clock-before">
+        <a href="#">
+          <div class="up">
+            <div class="shadow"></div>
+            <div class="inn">{{ minuteUnit.beforeUp }}</div>
+          </div>
+          <div class="down">
+            <div class="shadow"></div>
+            <div class="inn">{{ minuteUnit.beforeDown }}</div>
+          </div>
+        </a>
+      </li>
+      <li class="flip-clock-active">
+        <a href="#">
+          <div class="up">
+            <div class="shadow"></div>
+            <div class="inn">{{ minuteUnit.up }}</div>
+          </div>
+          <div class="down">
+            <div class="shadow"></div>
+            <div class="inn">{{ minuteUnit.down }}</div>
+          </div>
+        </a>
+      </li>
+    </ul>
   </view>
-  <view class="flip">
-    <view class="flip-num">{{ secondUnit }}</view>
+
+  <!-- <view class="gap"></view>    -->
+  <view wx:if="{{ showType === 1 }}"  class="gap-divider">
+    <span class="flip-clock-divider ">
+    <span class="flip-clock-label"></span>
+    <span class="flip-clock-dot top"></span>
+    <span class="flip-clock-dot bottom"></span>
+    </span>  
+  </view>
+
+  <view wx:if="{{ showType === 1 }}" class="gap"></view> 
+  <view wx:if="{{ showType === 1 }}" class="flip-ul">
+    <ul class="flip {{ secondTenth.play === 1 ? 'play' : ''}}">
+      <li class="flip-clock-before">
+        <a href="#">
+          <div class="up">
+            <div class="shadow"></div>
+            <div class="inn">{{ secondTenth.beforeUp }}</div>
+          </div>
+          <div class="down">
+            <div class="shadow"></div>
+            <div class="inn">{{ secondTenth.beforeDown }}</div>
+          </div>
+        </a>
+      </li>
+      <li class="flip-clock-active">
+        <a href="#">
+          <div class="up">
+            <div class="shadow"></div>
+            <div class="inn">{{ secondTenth.up }}</div>
+          </div>
+          <div class="down">
+            <div class="shadow"></div>
+            <div class="inn">{{ secondTenth.down }}</div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </view>
+  <view wx:if="{{ showType === 1 }}" class="gap"></view> 
+  <view wx:if="{{ showType === 1 }}" class="flip-ul">
+    <ul class="flip {{ secondUnit.play === 1 ? 'play' : ''}}">
+      <li class="flip-clock-before">
+        <a href="#">
+          <div class="up">
+            <div class="shadow"></div>
+            <div class="inn">{{ secondUnit.beforeUp }}</div>
+          </div>
+          <div class="down">
+            <div class="shadow"></div>
+            <div class="inn">{{ secondUnit.beforeDown }}</div>
+          </div>
+        </a>
+      </li>
+      <li class="flip-clock-active">
+        <a href="#">
+          <div class="up">
+            <div class="shadow"></div>
+            <div class="inn">{{ secondUnit.up }}</div>
+          </div>
+          <div class="down">
+            <div class="shadow"></div>
+            <div class="inn">{{ secondUnit.down }}</div>
+          </div>
+        </a>
+      </li>
+    </ul>
   </view>
 </view>

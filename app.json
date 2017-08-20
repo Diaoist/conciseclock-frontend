@@ -7,7 +7,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#000",
-    "navigationBarTitleText": "简时钟",
+    "navigationBarTitleText": "",
     "navigationBarTextStyle": "white"
   }
 }
