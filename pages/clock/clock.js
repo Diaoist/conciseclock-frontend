@@ -4,7 +4,7 @@ const util = require('../../utils/util.js')
 Page({
   data: {
     title: '简时钟',
-    showType: 1, // 0: 时分 1：时分秒
+    showType: 0, // 0: 时分 1：时分秒
     hourTenth: {
       beforeUp: 0,
       beforeDown: 0,
